@@ -1,0 +1,207 @@
+
+.full-height-card{
+    width: 100%;
+    height: 100vh;
+    padding: 2em 5em;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+/* ------->>> Cards container */
+.cards-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    animation: rgb-border 5s linear infinite;
+    border-radius: 0.5em;
+}
+/* ------->>> Border radius */
+.dogs-container{
+    border-radius: 0.5em 0 0 0.5em;
+}
+.dogs-container img{
+    border-radius: 0.5em 0 0 0.5em;
+}
+.cow-container{
+    border-radius: 0 0.5em 0.5em 0;
+}
+.cow-container img{
+    border-radius: 0 0.5em 0.5em 0;
+}
+@keyframes rgb-border{
+    0%{
+        box-shadow: 0px 10px 15px red;
+        transform: translateY(0px);
+    }
+    33%{
+        box-shadow: 0px 10px 15px green;
+        transform: translateY(+15px);
+    }
+    66%{
+        box-shadow: 0px 10px 15px blue;
+        transform: translateY(-15px);
+    }
+    100%{
+        box-shadow: 0px 10px 15px black;
+        transform: translateY(0);
+    }
+}
+.dogs-container{
+    width: 100%;
+    height: 100%;
+}
+.cats-container{
+    width: 100%;
+    height: 100%;
+}
+.cow-container{
+    width: 100%;
+    height: 100%;
+}
+/* ------->>> Container images */
+.dogs-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cats-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+.cow-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ------>>> Content container */
+.content{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	transform: translateY(101%);
+}
+.content h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 10px;
+}
+.content a{
+	color: white;
+	padding: 2px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.content a:hover{
+	color:aqua;
+	transform: scale(1.2);
+}
+/* ------->>> Hover Animations */
+.dogs-container{
+    position: relative;
+    overflow: hidden;
+}
+.cow-container{
+    position: relative;
+    overflow: hidden;
+}
+.cats-container{
+    position: relative;
+    overflow: hidden;
+}
+.dogs-container:hover img{
+    filter: blur(10px);
+    transition: filter 0.5s ease-in;
+}
+.cats-container:hover img{
+    filter: blur(10px);
+    transition: filter 0.5s ease-in;
+}
+.cow-container:hover img{
+    filter: blur(10px);
+    transition: filter 0.5s ease-in;
+}
+.dogs-container:hover .content{
+    transform: translateY(0);
+    transition: 1s ease-in-out;
+}
+.cow-container:hover .content{
+    transform: translateY(0);
+    transition: 1s ease-in-out;
+}
+.cats-container:hover .content{
+    transform: translateY(0);
+    transition: 1s ease-in-out;
+}
+/* ------>>> Media Queries */
+@media (max-width:900px) {
+    .cards-container{
+        grid-template-columns: auto;
+        box-shadow: none;
+        border-radius: 0;
+        animation: none;
+    }
+    .all-content-container{
+        background-color: transparent;
+    }
+    .dogs-container{
+        border-radius: 0;
+        height: 33vh;
+        animation: none;
+        border: 1px solid white;
+    }
+    .content{
+        transform: translateY(0);
+    }
+    .content a{
+        text-decoration: underline;
+        text-decoration-color: aquamarine;
+    }
+    .cats-container{
+        border-radius: 0;
+        height: 33vh;
+        animation: none;
+        border: 1px solid white;
+    }
+    .cow-container{
+        border-radius: 0;
+        height: 33vh;
+        animation: none;
+        border: 1px solid white;
+    }
+    .dogs-container img{
+        border-radius: 0;
+    }
+    .cow-container img{
+        border-radius: 0;
+    }
+   
+}
+@media (max-width:500px) {
+    .content a{
+        padding: 0.1em 0.5em;
+    }
+    .content h2{
+        font-size: 2rem;
+    }
+    .content a{
+        justify-content: center;
+        align-items: left;
+    }
+}
+@media (orientation:portrait){
+    .full-height-card{
+        height: fit-content;
+    }
+}

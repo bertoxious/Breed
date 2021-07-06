@@ -1,0 +1,75 @@
+{% extends 'homepage/navigation.html'%}
+{% load static %}
+	{% block container %}
+	<link rel="stylesheet" href={% static 'css/detailed.css' %}>
+	<!-- <div class="main-container"> -->
+		<div class="card-container">
+			<div class="image-container">
+				<img src="{{searched.images.url}}" alt="Image not available">
+			</div>
+			<div class="content-container">
+				<h1>{{searched.breed_name}}</h1>
+				<div class="detailed-content">
+					<p id="brief">{{searched.brief}}</p>
+					<div class="table-container">
+						
+						<div class="particular-card">
+							<p id="title">Country origin -></p>
+							<p>{{searched.country_origin}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Breed type -></p>
+							<p>{{searched.breed_type}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Body type -></p>
+							<p>{{searched.body_type}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Coat pattern</p>
+							<p>{{searched.coat_pattern}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Color -></p>
+							<p>{{searched.color}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h2 class="traits-heading">Characteristics</h2>
+		<div class="traits-card-container">
+			
+			<div class="height-card-container">
+				<img src="https://img.icons8.com/plasticine/100/000000/cat.png"/>
+				<p id="header">Height</p>
+			    <p>{{searched.height}}</p>
+			</div>
+			<div class="height-card-container">
+				<img src="https://img.icons8.com/cotton/64/000000/weight-1--v2.png"/>
+				<p id="header">Weight</p>
+			    <p>{{searched.weight}}</p>
+			</div>
+			<div class="height-card-container">
+				<img src="https://img.icons8.com/plasticine/100/000000/like--v1.png"/>
+				<p id="header">Lifespan</p>
+			    <p >{{searched.lifespan}}</p>
+			</div>
+		</div>
+
+		<div class="temperament-card-container">
+			<div class="heading">Temperament</div>
+			<div id="temperament-content">
+				{{searched.temperament}}
+		    </div>
+		</div>
+		<div class="temperament-card-container">
+			<div class="heading">Appearance</div>
+			<div id="temperament-content">
+				{{searched.appearance}}
+			</div>
+		</div>
+	<!-- </div> -->
+	{% include 'cats/cat_comments.html'%}
+    {% include 'homepage/newexplorecard.html'%}
+	{% endblock %}

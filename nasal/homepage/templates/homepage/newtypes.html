@@ -1,0 +1,30 @@
+{% extends "homepage/navigation.html" %}
+{% load static %}
+    {% block container %}
+    <link rel="stylesheet" href={% static 'css/newtypes.css'%}>
+    <div class="fact-container">
+        <div class="cat-image">
+            <img id="pic" src="{% static 'images/cat.svg'%}" alt="">
+        </div>
+        <div class="fact-description">
+            <p>Did you know there are more than 71+ breeds of cats around the world.</p>
+        </div>
+    </div>
+    <!-- MAIN CONTAINER -->
+    <div class="types-main-container">
+        {% for item in all%}
+        <!-- CARD CONTAINER -->
+        <div class="types-card-container">
+            <div class="types-card-image-container">
+                <a href="{% url 'detailed-info' item.id %}"><img src="{{item.images.url}}" alt=""></a>
+            </div>
+            <div class="types-card-name-container">
+                <a href="{% url 'detailed-info' item.id %}"><p>{{item.breed_name}}</p></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% include "homepage/newexplorecard.html"%}
+    {% endblock container %}
+    
+  

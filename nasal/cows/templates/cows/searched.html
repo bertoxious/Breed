@@ -1,0 +1,25 @@
+{% extends 'homepage/navigation.html'%} 
+    {% block container %}
+    {% load static %}
+    <link rel="stylesheet" href={% static 'css/searched.css'%}>
+    {% if searched %}
+    <div class="showingresults">
+        <h1>Showing results for : {{searched}}</h1>
+    </div>
+    {% endif %}
+    <div class="searched-main-container">
+    {% for i in breeds %} 
+        <div class="searched-card-container">
+            <div class="searched-card-image-container">
+                <a href="{% url 'cows-detailed-info' i.id %}"><img src="{{i.breed_image.url}}" alt="Image will be displayed"></a>
+            </div>
+            <div class="searched-card-name-container">
+                <a href="{% url 'cows-detailed-info' i.id %}"><p>{{i.breed_name}}</p></a>
+            </div>
+        </div>
+        {% endfor %}  
+    </div>  
+    {% include 'homepage/newexplorecard.html' %}
+    {% endblock container %}
+</body>
+</html>

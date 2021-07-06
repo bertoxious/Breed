@@ -1,0 +1,26 @@
+{% extends "homepage/navigation.html"%}
+{% load static %}
+    {% block container%}
+        <link rel="stylesheet" href={% static 'css/about.css'%}>
+        <div class="back-container">
+            <div class="about-card">
+                <h1>Breed</h1>
+                <div class="overlay-card">
+                    <div class="about-text">
+                        <p>About</p>
+                    </div>
+                    <div class="about-content">
+                        <p>Breed is a vision to provide each and every individual who loves animals or want to gain knowledge about them in every aspect to profit in any field. Breed is a simple yet efficient program to do so. The chracaterstics / traits of each and every animal maybe it is a dog or a cow or a cat is registered in the breed database. The digital signatures of the developer is provided and with some information to contact.</p>
+                    </div>
+                    <div class="all-right">
+                        <p>Breed &copy; 2021 | All rights are reserverd.</p>
+                    </div>
+                    <div class="digital-signature">
+                        <p>Ashish Kumar</p>
+                        <p>Nandita Singla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'homepage/newexplorecard.html'%}
+    {% endblock container%}

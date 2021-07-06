@@ -1,0 +1,40 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/newexplorecard.css'%}">
+<div class="full-height-card">
+	<div class="cards-container">
+		<div class="dogs-container">
+			<img src="{% static 'images/blackdog.jpg'%}" alt="">
+			<div class="content">
+				<h2>Dogs</h2>
+				<a href="{% url 'most-popular-dogs' %}">most popular dog breeds</a>
+				<a href="{% url 'easy-to-train-dogs'%}">easy to train dogs</a>
+				<a href="{% url 'top-ten-dangerous-dogs'%}">most dangerous dogs</a>
+				<a href="{% url 'largest-dogs'%}">largest dogs in world</a>
+				<a href="{% url 'swimmer-dogs'%}">best swimmer dogs</a>
+			</div>
+		</div>
+		<div class="cats-container">
+			<img src="{% static 'images/cat.jpg'%}" alt="">
+			<div class="content">
+				<h2>Cats</h2>
+				<a href="{% url 'most-popular-cats'%}">most popular cat breeds</a>
+				<a href="{% url 'fluffiest-cats'%}">fluffiest cat breeds</a>
+				<a href="{% url 'dangerous-cats'%}">dangerous house cats</a>
+				<a href="{% url 'largest-cats'%}">largest cat breeds</a>
+				<a href="{% url 'beautiful-cats'%}">most beautiful cats</a>
+			</div>
+		</div>
+		<div class="cow-container">
+			<img src="{% static 'images/cow.jpg'%}" alt="">
+			<div class="content">
+				<h2>Cows</h2>
+				<a href="{% url 'dairy-breeds' %}">most popular cattle breeds</a>
+				<a href="{% url 'most-common-cattle-breeds' %}">most common cattle breeds</a>
+				<a href="{% url 'indian-dairy-cows' %}">milk demanding cows of India</a>
+				<a href="">exceptional cattle breeds</a>
+				<a href="{% url 'american-dairy-cows' %}">popular cow breed of USA</a>
+			</div>
+		</div>
+	</div>
+</div>

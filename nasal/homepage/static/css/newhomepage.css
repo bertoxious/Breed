@@ -1,0 +1,126 @@
+.banner-image-container{
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+}
+.banner-image-container .color{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: transparent;  
+    animation: text-movement 10s linear infinite;
+}
+.banner-image-container .color p{
+    font-size: 3em;
+    text-align: center;
+}
+.banner-image-container img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: contain;
+    animation: cat-movement 10s linear infinite;
+    background-color: transparent;
+}
+@keyframes cat-movement {
+    0%{
+        transform: translateY(+100%);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(+100%);
+        opacity: 0;
+    }
+}
+@keyframes text-movement{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    25%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    75%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.select-a-category{
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+}
+.select-a-category p{
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.flexbox-container{
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flexbox-container img{
+    width: 125px;
+    height: 125px;
+    border-radius: 5px;
+    padding: 1em;
+    transition: 0.2s ease-in-out;
+}
+.flexbox-container img:hover{
+    transform: scale(1.2);
+    /* background-color: lightgreen; */
+    padding: 0.1em;
+    filter: contrast(1.1);
+}
+.info-container{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+}
+.card-container{
+    padding: 0.5em;
+    display: flex;
+    overflow: hidden;
+}
+.card-container img{
+    width: 30%;
+    height: 100%;
+}
+.card-container p{
+    width: 70%;
+    height: 100%;
+}
+@media (max-width:700px){
+    .info-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+}

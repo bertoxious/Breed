@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<link rel="shortcut icon" type="image/png" href="{% static 'images/boxer.png'%}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breed &copy; 2021 homepage</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
+
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href={% static 'css/navigation.css'%}>
+</head>
+<body>
+    <div class="main-container">
+		<div class="navigation-bar"> 
+			<div class="top-header">
+				<div class="top-component">
+					<p>Breed.com</p>
+				    <div class="search-department">
+				    	<form method=POST action="{% url 'searched-item'%}">
+				    		{% csrf_token %}
+					    	<select id="breed" name="retro">
+						    	<option>Dogs</option>
+						    	<option>Cats</option>
+						    	<option>Cows</option>
+					    	</select>
+                    		<input id="search" type="text" placeholder="Enter a breed name to search" name="searched">
+                		</form>
+					</div>
+				</div>
+			</div>
+            <div class="bottom-header">
+				<div class="links">
+					<a style="color: black;" href= {% url 'index-page'%}><p>Home</p></a>
+					<a style="color: black;" href={% url 'explore' %}><p>Explore</p></a>
+					<a style="color: black;" href={% url 'about' %}><p>About</p>	</a>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="new-main-container">
+		<div class="all-content-container">
+			{% block container %}
+			{% endblock container %}
+		</div>
+	</div>
+	<footer>
+    	 Breed &copy;	 2021 | All rights reserved. 
+    </footer>
+    <script>
+			var type = document.getElementById("breed").value;
+			console.log(type);
+	</script>
+ 	
+</body>
+</html>

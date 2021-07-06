@@ -1,0 +1,22 @@
+{% extends 'homepage/navigation.html'%}
+	{% load static %}
+	{% block container %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cat_comment_section.css'%}">
+		<h1 id="add-comment">Add a comment here : </h1>
+		<div class="form-container">
+			<form method="POST">
+				{% csrf_token %}               
+
+				<div class="fields">Name :</div>
+				<div class="fields">{{form.name}}</div>
+				<div class="fields">Email Id :</div>
+				<div class="fields">{{form.email}}</div>
+				<div class="fields">Comment :</div>
+				<div class="fields">{{form.comment}}</div>
+				<input id="submit-button" type="submit" value="Submit">	
+			</form>
+		</div>
+	{% endblock container %}
+
+	{% include 'homepage/newexplorecard.html'%}
+

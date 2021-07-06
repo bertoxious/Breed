@@ -1,0 +1,100 @@
+/* ---------Card container---------------- */
+.top-card-container{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+/* ------------Image Container---------------- */
+.top-image-container{
+    width: 50%;
+    display: flex;
+    background-color:red;
+    transition: width 0.5s ease-in-out;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.top-image-container:hover{
+    width: 80%;
+    border: 0.5em solid white;
+}
+/* -------------Content Container------------- */
+.top-content-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: black;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+.top-content-container #heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5em;
+    font-size: 4rem;
+    color: white;  
+    text-transform: uppercase;
+}
+.top-content-container #description{
+    font-family: 'Franklin Gothic Regular', 'Arial Narrow', Arial, monospace;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 0.5em;
+    margin-bottom: 1rem;
+    color: white;
+    justify-content: center;
+    text-align: justify;
+}
+
+@media (max-width: 900px){
+    .top-card-container{
+        flex-direction: column;
+        max-height: fit-content;
+        padding: 0.5em;
+    }
+    .top-image-container{
+        width: 100%;
+        height: 60%;
+    }
+    .top-content-container{
+        width: 100%;
+        height: 40%;
+    }
+    .top-content-container #heading{
+        font-size: 2rem;
+        padding: 0.5em;
+    }
+    .top-card-container{
+        justify-content: center;
+    }
+    .top-content-image-container img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .top-image-container:hover{
+        width: 100%;
+        border: none;
+    }
+}
+@media (max-width: 600px){  
+    .top-image-container{
+        height: 50%;
+    }
+    .top-content-container{
+        height: 50%;
+    }
+}
+@media (max-width: 400px){
+    .top-content-container #heading{
+        font-size: 1.2rem;
+    }
+    .top-content-container #description{
+        font-size: 1rem;
+    }
+}
+@media (orientation:portrait){
+    .top-card-container{
+        height: 70vh;
+    }
+}

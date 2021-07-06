@@ -1,0 +1,81 @@
+{% extends 'homepage/navigation.html'%}
+{% load static %}
+	{% block container %}
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href={% static 'css/detailed.css' %}>
+	<link rel="stylesheet" href={% static 'css/cows_detailed.css' %}>
+	<!-- <div class="main-container"> -->
+		<div class="card-container">
+			<div class="image-container">
+				<img src="{{cow_searched.breed_image.url}}" alt="Image not available">
+			</div>
+			<div class="content-container">
+				<h1>{{cow_searched.breed_name}}</h1>
+				<div class="detailed-content">
+					<!-- <p id="brief">{{cow_searched.characteristics}}</p> -->
+					<div class="table-container">
+
+						<div class="particular-card">
+							<p id="title">Country origin -></p>
+							<p>{{cow_searched.country_origin}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Skin Color -></p>
+							<p>{{cow_searched.skin_color}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Coat -></p>
+							<p>{{cow_searched.coat}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Conservation status -></p>
+							<p>{{cow_searched.conservation_status}}</p>
+						</div>
+						<div class="particular-card">
+							<p id="title">Distribution -></p>
+							<p>{{cow_searched.distribution}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h2 class="traits-heading">TRAITS</h2>
+		<div class="traits-card-container">
+			
+			<div class="height-card-container">
+				<img src="https://img.icons8.com/fluent/48/000000/cow.png"/>
+				<p id="header">Horn Status</p>
+			    <p>{{cow_searched.horn_status}}</p>
+			</div>
+			<div class="height-card-container">
+				<img src="https://img.icons8.com/emoji/48/000000/cow-emoji.png"/>
+				<p id="header">Weight</p>
+			    <p>{{cow_searched.weight}}</p>
+			</div>
+			<div class="height-card-container">
+				{% if 'milk' in cow_searched.used_for%}
+				<img src="https://img.icons8.com/cotton/64/000000/steak-medium--v1.png"/>
+				<img src="https://img.icons8.com/doodle/48/000000/milk-bottle.png"/>
+				{% else %}
+				<img src="https://img.icons8.com/cotton/64/000000/steak-medium--v1.png"/>
+				{% endif %}
+				<p id="header">Used For</p>
+			</div>
+		</div>
+		<div class="temperament-card-container">
+			<div class="heading">History</div>
+			<div id="temperament-content">
+				{{cow_searched.history}}
+		    </div>
+		</div>
+		<div class="temperament-card-container">
+			<div class="heading">Characteristics</div>
+			<div id="temperament-content">
+				{{cow_searched.characteristics}}
+			</div>
+		</div>
+	<!-- </div> -->
+	{% include 'cows/cow_comments.html'%}
+    {% include 'homepage/newexplorecard.html'%}
+	{% endblock %}

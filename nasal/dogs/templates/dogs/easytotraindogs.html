@@ -1,0 +1,23 @@
+{% extends 'homepage/navigation.html' %}
+{% load static %}
+    {% block container %}
+    <link rel="stylesheet" href={% static "css/topten.css" %}>
+    <!-- MAIN CONTAINER -->
+    <!-- <div class="main-container"> -->
+        <!-- CARD CONTAINER -->
+        {% for breed in easytotrainDogs%}
+        <div class="top-card-container">
+            <!-- IMAGE CONTAINER -->
+            <div class="top-image-container">
+                <img src="{{breed.breed_image}}" alt="">
+            </div>
+            <!-- CONTENT CONTAINER -->
+            <div class="top-content-container">
+                <p id="heading">{{breed.breedname}}</p>
+                <p id="description">{{breed.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    <!-- </div> -->
+    {% include 'homepage/newexplorecard.html' %}
+    {% endblock container %}

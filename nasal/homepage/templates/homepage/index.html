@@ -1,0 +1,21 @@
+{% extends 'homepage/navigation.html'%}
+	{% load static %}
+	{% block container %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}">
+		<div class="index-main-container">
+			<div class="content-index-container">
+				<div id="heading">Breed</div>
+				<div class="write"> “Cats have a scam going – you buy the food, they eat the food, they go away; that’s the deal.”</div>
+				<div class="write">Eddie Izzard</div>
+				<div class="selection">Select a category</div>
+				<div class="category-container">
+					<a href="{% url 'cat-types' %}"><img class="catco" src="https://3.bp.blogspot.com/-POLtYDrBGjc/Tx6fsyg3dGI/AAAAAAAAAE8/dv2V-YL0VPQ/s1600/BestHDWallpapersPack475_24.jpg"></a>
+					<a href="{% url 'dog-types' %}"><img class="catcodog" src="https://hddesktopwallpapers.in/wp-content/uploads/2015/08/dog-curious-animal.jpg"></a>
+					<a href="{% url 'cow-types'%}"><img class="catcocow" src="https://cdn.wallpapersafari.com/27/24/QBgEKl.jpg"></a>
+				</div>
+			</div>
+			<div class="image-index-container">
+				<img src="{% static  'images/german.png'%}">
+			</div>
+		</div>
+	{% endblock container %}

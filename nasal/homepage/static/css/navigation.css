@@ -1,0 +1,133 @@
+@font-face{
+	src: url('..static/fonts/Dopestyle.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+.main-container{
+	background-color: purple;
+}
+.navigation-bar{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 100%;
+}
+.top-header{
+	display: flex;
+	background-color: black;
+    justify-content: center;
+	align-items: center;
+}
+.top-component{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: 2rem;
+    padding: 0.6em;
+    max-width: 1600px;
+}
+.top-component p{
+	font-family: Dopestyle;
+	color: white;
+}
+.search-department{
+	display: flex; 
+	width: 250px;
+	justify-content: center;
+	align-items: center;
+}
+.search-department form{
+	display: flex;
+}
+.search-department form #breed{
+	height: 2rem;
+	width: 100px;
+}
+#breed{
+	height: 100%;
+	width: 30%;
+}
+#search{
+	display: flex;
+	height: 2rem;
+	width: 100%;
+	text-align: center;
+}
+.links{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	max-width: 1600px;
+}
+.links p{
+	padding: 0.5em;
+	font-family: 'Poppins', sans-serif;
+	font-style: Black;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-left: 1em;
+}
+.links p:hover{
+	transform: scale(1.5);
+	color: white;
+	cursor: pointer;
+	background-color: black;
+}
+.bottom-header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer{
+	background-color: black;
+	width: 100%;
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	position: relative;
+	font-size: 1rem;
+	font-family: 'Poppins', monospace;
+}
+@media (max-width:600px){
+    .top-component{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }	
+}
+.new-main-container{
+	display: flex;
+	width: 100%;
+	background-color: whitesmoke;
+	background-image: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));
+	justify-content: center;
+	align-items: center;
+}
+
+.all-content-container{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5em 0.5em 0em 0.5em;
+	max-width: 1600px;
+}

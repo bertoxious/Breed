@@ -1,0 +1,79 @@
+.index-main-container{
+	width: 100%;
+	display: flex;
+}
+.content-index-container{
+	width: 50%;
+	height: 80vh;
+	background-color: whitesmoke;
+	font-family: 'Poppins', sans-serif;
+	font-style: italic;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 2em 2em 2em 2em;
+}
+
+#heading{
+	font-size: 3em;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+.selection{
+	padding: 0.5em;
+	font-style: normal;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700; 
+}
+.image-index-container{
+	width: 50%;
+	background-color: whitesmoke;
+	height: 80vh;
+}
+.image-index-container img{
+	width: 100%;
+	height: 80vh;
+	object-fit: cover;
+	opacity: 0.7;
+	transition: opacity 1s ease-in-out;
+}
+.image-index-container img:hover{
+	opacity: 0.9;
+}
+
+.category-container{
+	display: flex;
+	width: 100%;
+	padding: 1em;
+}
+.category-container a img{
+	opacity: 1;
+	width: 100%;
+	height: 200px;
+	transition: border 0.5s ease-in-out;
+	cursor: pointer;
+	object-fit: cover;
+	clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+	opacity: 1;
+	z-index: 1;
+}
+.category-container a .catcodog{
+	clip-path: none;
+}
+.category-container a .catcocow{
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+/*.category-container a img:nth-child(1){
+	clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}*/
+.category-container a img:nth-child(2){
+	clip-path: none;
+}
+/*.category-container a img:nth-child(3){
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+*/.category-container a:hover{
+	transform: scale(1.2);
+	z-index: 2;
+}

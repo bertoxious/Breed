@@ -1,0 +1,89 @@
+.back-container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.about-card{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.about-card h1{
+    font-size: 10rem;
+    font-family: 'dopestyle';
+    color: black;
+    opacity: 0.8;
+    animation: textanimate 5s ease-in-out infinite;
+}
+.overlay-card{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    position: absolute;
+    opacity: 0.8;
+}
+.about-text{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.about-content{
+    font-size: 1rem;
+    padding: 0.5em;
+    color: black;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.digital-signature{
+    text-align: center;
+    font-family: 'sallim regular';
+    font-size: 2.5rem;
+    padding: 0.5em;
+    opacity: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.all-right{
+    text-align: center;
+    font-size: 1rem;
+}
+@keyframes textanimate {
+    0%{
+        font-size: 5rem;
+        transform: rotateZ(0deg);
+    }
+    50%{
+        font-size: 10rem;
+        transform: rotateZ(360deg);
+        transform: rotateX(360deg);
+        transform: rotateY(360deg);
+    }
+    100%{
+        font-size: 5rem;
+        transform: rotateZ(0deg);
+    }
+    
+}
+@media (max-width:500px){
+    .about-card h1{
+        font-size: 5rem;
+    }
+    .back-container{
+        height: 60vh;
+    }
+}

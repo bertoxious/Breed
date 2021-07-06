@@ -1,0 +1,23 @@
+.form-container{
+	width: 100%;
+	text-align: center;
+	line-height: 2rem;
+}
+.form-container p{
+	font-family: 'Poppins',sans-serif;
+}
+#add-comment{
+	font-family: 'Poppins',sans-serif;
+}
+.form-container #submit-button{
+	background-color: green;
+	color: white;
+	text-transform: uppercase;
+	padding: 0.5em;
+	border-radius: 3px;
+	border: 1px solid black;
+	margin-bottom: 1rem;
+}
+.form-container form{
+	font-family: 'Poppins', sans-serif;
+}

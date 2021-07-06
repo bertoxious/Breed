@@ -1,0 +1,69 @@
+.super-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: maroon;
+    width: 100%;
+}
+/* ---------Card container---------------- */
+.newten-card-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+/* ------------Image Container---------------- */
+.newten-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    width: 50%;
+    background-color: red;
+}
+.newten-image-container img{
+    width: 100%;
+}
+/* -------------Content Container------------- */
+.newten-content-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+}
+.newten-content-container #heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2rem;
+    font-size: 5em;
+    /*margin-top: 10rem;*/
+    color: white;  
+}
+.newten-content-container #description{
+    font-family: 'Franklin Gothic Regular', 'Arial Narrow', Arial, monospace;
+    padding: 2em;
+    color: white;
+    justify-content: center;
+    text-align: justify;
+}
+
+@media (max-width:1000px) {
+    .newten-content-container #heading{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    .newten-card-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newten-image-container{
+        visibility: hidden;
+        width: 0%;
+        height: 0%;
+    }
+    .newten-content-container{
+        width: 100%;
+    }
+    
+}

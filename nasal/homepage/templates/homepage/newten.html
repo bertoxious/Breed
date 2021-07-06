@@ -1,0 +1,84 @@
+{% extends "homepage/navigation.html" %}
+{% load static %}
+   {% block container %}
+   <link rel="stylesheet" href={% static "css/newten.css" %}>
+        <!-- CARD CONTAINER -->
+        <div class="super-container">
+            <div class="newten-card-container">
+                <!-- IMAGE CONTAINER -->
+                <div class="newten-image-container">
+                    <img src={% static "images/pitbull.png" %} alt="">
+                </div>
+                <!-- CONTENT CONTAINER -->
+                <div class="newten-content-container">
+                    <p id="heading">PITBULL</p>
+                    <p id="description">Pit Bulls are fighter dogs and they will enthusiastically go after their task until completed! They have a very powerful jaw and bite and are well-known to not release their bite so easily! Therefore, they should be trained and socialized from an early age in order to avoid unnecessary dangerous situations!</p>
+                </div>
+            </div>
+            <div class="newten-card-container">
+                <div class="newten-image-container">
+                    <img src={% static "images/rottweiler.png" %} alt="">
+                </div> 
+                <div class="newten-content-container">
+                    <p id="heading">ROTTWEILER</p>
+                    <p id="description">Rottweilers have one of the worst tempers, and are also, considered unsuitable family dogs, especially for families where the owner is an amateur, without a calm and assertive nature! They need to be continuously trained and attentive to, in order to avoid dangerous reactions</p>
+                </div>
+            </div>
+            <div class="newten-card-container">
+                <div class="newten-image-container">
+                    <img src={% static "images/germanshepherd.png" %} alt="">
+                </div>
+                <div class="newten-content-container">
+                    <p id="heading">GERMAN SHEPHERD</p>
+                    <p id="description">German Shepherds can react on great speed and are extremely focused on taking the danger down, they can cause fatal damage! GSDs aggressive nature can be somewhat toned down by appropriate training, socialization, and affection! In this way, you will get a loyal and very loving household pet!</p>
+                </div>
+            </div>
+            <div class="newten-card-container">
+                <div class="newten-image-container">
+                    <img src={% static "images/bullmastiff.png" %} alt="" padding-left=2rem>
+                </div>
+                <div class="newten-content-container">
+                    <p id="heading">BULLMASTIFF</p>
+                    <p id="description">As guard dogs, Bullmastiffs have a natural aggressive temperament, which if not properly cared for can turn out fatal! They are large dogs, therefore, training them and making them obedient is a must in order to avoid unpleasant confrontations!</p>
+                </div>
+                
+            </div>
+            <div class="newten-card-container">
+                <div class="newten-image-container">
+                    <img src={% static "images/dobermanpinscher.png" %} alt="">
+                </div>
+                <div class="newten-content-container">
+                    <p id="heading">DOBERMAN PINSCHER</p>
+                    <p id="description">Doberman Pinschers are very intelligent, strong and very sensitive to sound! They will sense danger and will react on their own! They are naturally aggressive towards strangers and also their size plays a role in making them even more dangerous! If not properly trained and obedient, they can cause quite some damage!</p>
+                </div>
+            </div>
+            <div class="newten-card-container">         
+                <div class="newten-image-container">
+                    <img src={% static "images/siberianhusky.png" %} alt="">
+                </div>
+                <div class="newten-content-container">
+                    <p id="heading">SIBERIAN HUSKY</p>
+                    <p id="description">Siberian Huskies, just like the Alaskan Malamutes, have been bred as working dogs, and that is the reason they are not very social! But, with the right approach and training, you can make them become more friendly and calm! Poor socialization and training will surely turn them into aggressive and dangerous dogs</p>
+                </div>
+            </div>
+            <div class="newten-card-container">
+                <div class="newten-image-container">
+                    <img src={% static "images/boxer.png" %} alt="">
+                </div>
+                <div class="newten-content-container">
+                    <p id="heading">BOXER</p>
+                    <p id="description">Boxers are hunting dogs and they have been used as an attack and guard dogs ever since being bred! They have a powerful jaw and bite – which is perfect for protection! But, if not properly trained they can turn out very aggressive attackers! Another thing to keep in mind while training Boxers is to avoid harsh treatment and punishment as these factors can make the situation even worse!</p>
+                </div>
+            </div>
+            <div class="newten-card-container">         
+                <div class="newten-image-container">
+                    <img src={% static "images/greatdane.png" %} alt="">
+                </div>
+                <div class="newten-content-container">
+                    <p id="heading">GREAT DANE</p>
+                    <p id="description">Boxers are hunting dogs and they have been used as an attack and guard dogs ever since being bred! They have a powerful jaw and bite – which is perfect for protection! But, if not properly trained they can turn out very aggressive attackers! Another thing to keep in mind while training Boxers is to avoid harsh treatment and punishment as these factors can make the situation even worse!</p>
+                </div>
+            </div>
+        </div>
+        {% include 'homepage/newexplorecard.html'%}
+            {% endblock container %}

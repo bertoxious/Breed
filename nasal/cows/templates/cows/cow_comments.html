@@ -1,0 +1,18 @@
+
+{% load static %}
+    <link rel="stylesheet" href={% static 'css/comments.css' %}>
+        <div class="comments-main-container">
+            <h2 id="heading">Comments  <img src="https://img.icons8.com/android/24/000000/comments.png"/> </h2>
+            <div class="comments-container">
+                {% if not cow_searched.cattle_comments.all %}
+                  <p>No comments yet.</p><a href="{% url 'add-cow-comment' cow_searched.id %}">Add a comment</a>
+                {% else %}
+                    <a href="{% url 'add-cow-comment' cow_searched.id %}">Add a comment</a><br><br>
+                    {% for comment in cow_searched.cattle_comments.all %}
+                        <p>{{comment.name}} ----{{comment.date_added}}</p>
+                        <p>{{comment.body}}</p>
+                        <br>
+                    {% endfor %}
+                {% endif %} 
+            </div>
+        </div>

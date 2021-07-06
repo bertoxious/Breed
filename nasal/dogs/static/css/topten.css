@@ -1,0 +1,73 @@
+/* ---------Card container---------------- */
+.top-card-container{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+/* ------------Image Container---------------- */
+.top-image-container{
+    width: 50%;
+    display: flex;
+    background-color:red;
+    transition: width 0.5s ease-in-out;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.top-image-container:hover{
+    width: 80%;
+    border: 0.5em solid white;
+}
+/* -------------Content Container------------- */
+.top-content-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: black;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+.top-content-container #heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5em;
+    font-size: 4rem;
+    color: white;  
+    text-transform: uppercase;
+}
+.top-content-container #description{
+    font-family: 'Franklin Gothic Regular', 'Arial Narrow', Arial, monospace;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 0.5em;
+    margin-bottom: 1rem;
+    color: white;
+    justify-content: center;
+    text-align: justify;
+}
+
+@media (max-width: 900px){
+    .top-card-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: fit-content;
+    }
+    .top-image-container{
+        width: auot;
+    }
+    .top-content-container{
+        width: 100%;
+    }
+    .top-content-container #heading{
+        font-size: 2rem;
+    }
+    .top-card-container{
+        justify-content: center;
+    }
+    .top-image-container:hover{
+        width: auto;
+        border: none;
+    }
+}
