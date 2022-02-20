@@ -1,5 +1,6 @@
 @font-face{
-	src: url('..static/fonts/Dopestyle.ttf') format('truetype');
+	font-family: 'Dopestyle';
+	src: url("Dopestyle.ttf");
 }
 *{
     margin: 0;
@@ -38,7 +39,7 @@
     max-width: 1600px;
 }
 .top-component p{
-	font-family: Dopestyle;
+	font-family: 'Dopestyle';
 	color: white;
 }
 .search-department{

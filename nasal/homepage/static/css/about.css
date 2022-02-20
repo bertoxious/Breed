@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap');
+@font-face{
+	font-family: 'Sallim';
+	src: url("Sallim.ttf");
+}
 .back-container{
     width: 100%;
     height: 80vh;
@@ -18,7 +23,7 @@
 }
 .about-card h1{
     font-size: 10rem;
-    font-family: 'dopestyle';
+    font-family: 'Dopestyle';
     color: black;
     opacity: 0.8;
     animation: textanimate 5s ease-in-out infinite;
@@ -37,7 +42,7 @@
     color: black;
     text-align: center;
     margin-top: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins';
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -51,7 +56,7 @@
 }
 .digital-signature{
     text-align: center;
-    font-family: 'sallim regular';
+    font-family: 'Sallim';
     font-size: 2.5rem;
     padding: 0.5em;
     opacity: 1;
